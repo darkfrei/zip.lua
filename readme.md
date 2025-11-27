@@ -1,6 +1,6 @@
 zip.lua is a pure Lua/FFI zip writer/reader module for LuaJIT and Love2D.
 
-## features:
+## Features:
 - deflate compression using system zlib (ffi)
 - no external Lua dependencies (use any serialisation instead of serpent)
 - works on Windows, Linux, macOS
@@ -10,7 +10,7 @@ zip.lua is a pure Lua/FFI zip writer/reader module for LuaJIT and Love2D.
 - supports central directory and EOCD
 - compatible with Lua 5.1 / LuaJIT
 
-## usage example:
+## Usage example:
 
 ```lua
 local zip = require("zip")
@@ -29,3 +29,4 @@ for _, e in ipairs(loaded.entries) do
     print(e.filename, #e.data)
 end
 ```
+
