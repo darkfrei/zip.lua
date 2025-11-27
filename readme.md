@@ -18,7 +18,16 @@ local archive = zip.new("optional comment")
 
 archive:addFile("hello.txt", "hello world", true)
 
-local data = { a = 1, b = true, c = {1,2,3} }
+local data = {
+	1,
+	2,
+	3,
+	a = {
+		"empty"
+	},
+	b = true,
+	c = -3.14
+}
 local serialized = serializeTable(data)
 archive:addFile("table.lua", serialized, true)
 
@@ -29,4 +38,5 @@ for _, e in ipairs(loaded.entries) do
     print(e.filename, #e.data)
 end
 ```
+
 
